@@ -4,7 +4,7 @@
  # Autoor     : lili
 
 class My_first_method:
-# __init__ method can initaln
+ __'''init__ method can initialization'''
 	def __init__(self, name1, name2):
 		self.name1 = name1
 		self.name2 = name2
