@@ -17,8 +17,8 @@ thread_count: 8 ; 抓取线程数
 ```
 
 种子文件每行一条链接，例如: 
-> http://www.baidu.com 
-> http://www.sina.com.cn 
+> http://www.baidu.com</br>
+> http://www.sina.com.cn</br>
 
 1. 要求和注意事项:
 2. 需要支持命令行参数处理。具体包含: -h(帮助)、-v(版本)、-c(配置文件)
@@ -38,9 +38,9 @@ thread_count: 8 ; 抓取线程数
 提示(下面的python库可能对你完成测试题有帮助):
 
 > re(正则表达式)
->> 参考: http://docs.python.org/2/library/re.html
->> 参考: http://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html
->> 参考: http://blog.csdn.net/jgood/article/details/4277902
+>> 参考: http://docs.python.org/2/library/re.html</br>
+>> 参考: http://www.cnblogs.com/huxi/archive/2010/07/04/1771073.html</br>
+>> 参考: http://blog.csdn.net/jgood/article/details/4277902</br>
 
 > gevent/threading(多线程)
 >> 参考: http://docs.python.org/2/library/threading.html
