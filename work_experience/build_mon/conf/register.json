@@ -1,0 +1,525 @@
+{
+  "build": {
+    "kutype_num": "26",
+    "kutype": [
+      {
+        "name": "wdna",
+        "project_name": "swift",
+        "database_kutype": "wdna",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>5h; kutype_start_interval<14h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "output_analysis": "output_release_url_num>7000000",
+            "download_analysis": "download_used_time<1h; download_url_num>7900000",
+            "parser_analysis": "parser_output_size_m>100m",
+            "dag_analysis": "dag_output_size_m>100m",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+            "swift_analysis": "swift_publish_num<8000000"
+          }
+        }
+      },
+      {
+        "name": "wdnb",
+        "project_name": "swift",
+        "database_kutype": "wdnb",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>5h; kutype_start_interval<14h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "output_analysis": "output_release_url_num>20000000",
+            "download_analysis": "download_used_time<2h; download_url_num>22000000",
+            "parser_analysis": "parser_output_size_m>100m",
+            "dag_analysis": "dag_output_size_m>100m",
+            "transmint_analysis" : "transdi_used_time<=2h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+            "swift_analysis": "swift_publish_num<23000000"
+          }
+        }
+      },
+      {
+        "name": "wp",
+        "project_name": "daily",
+        "database_kutype": "wp",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>10h; kutype_start_interval<28h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "output_analysis": "output_release_url_num>1500000",
+            "download_analysis": "download_used_time<2h; download_url_num>34000000",
+            "parser_analysis": "parser_output_size_m>100m",
+            "dag_analysis": "dag_output_size_m>100m",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "daily-wenku",
+        "project_name": "daily",
+        "database_kutype": "daily-wenku",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>10h; kutype_start_interval<28h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "output_analysis": "output_release_url_num>1500000",
+            "download_analysis": "download_used_time<2h; download_url_num>4000000",
+            "parser_analysis": "parser_output_size_m>100m",
+            "dag_analysis": "dag_output_size_m>100m",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "daily-zhidao",
+        "project_name": "daily",
+        "database_kutype": "daily-zhidao",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>10h; kutype_start_interval<28h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "output_analysis": "output_release_url_num>1500000",
+            "download_analysis": "download_used_time<2h; download_url_num>4000000",
+            "parser_analysis": "parser_output_size_m>100m",
+            "dag_analysis": "dag_output_size_m>100m",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "scholar-wp",
+        "project_name": "daily",
+        "database_kutype": "scholar-wp",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>10h; kutype_start_interval<28h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "output_analysis": "output_release_url_num>1500000",
+            "download_analysis": "download_used_time<2h; download_url_num>2000000",
+            "parser_analysis": "parser_output_size_m>100m",
+            "dag_analysis": "dag_output_size_m>100m",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "tiebadaily",
+        "project_name": "daily-cse-tieba",
+        "database_kutype": "tiebadaily",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>24h; kutype_start_interval<28h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "output_analysis": "output_release_url_num>1500000",
+            "download_analysis": "download_used_time<2h; download_url_num>4000000",
+            "parser_analysis": "parser_output_size_m>100m",
+            "dag_analysis": "dag_output_size_m>100m",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "wise-daily",
+        "project_name": "daily-wise",
+        "database_kutype": "wise-daily",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>10h; kutype_start_interval<28h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "output_analysis": "output_release_url_num>1500000",
+            "download_analysis": "download_used_time<2h; download_url_num>1700000",
+            "parser_analysis": "parser_output_size_m>100m",
+            "dag_analysis": "dag_output_size_m>100m",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "tiebahour",
+        "project_name": "tiebahour",
+        "database_kutype": "tiebahour",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>8h; kutype_start_interval<4h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "output_analysis": "output_release_url_num>7000000",
+            "download_analysis": "download_used_time<2h; download_url_num>7900000",
+            "parser_analysis": "parser_output_size_m>100m",
+            "dag_analysis": "dag_output_size_m>100m",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+            "swift_analysis": "swift_publish_num<8000000"
+          }
+        }
+      },
+      {
+        "name": "vip",
+        "project_name": "se",
+        "database_kutype": "vip",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "14m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>4h; kutype_start_interval<30h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "download_analysis": "download_url_num>1400000000",
+            "parser_analysis": "parser_used_time<12h",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "se",
+        "project_name": "se",
+        "database_kutype": "se",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "14m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>4h; kutype_start_interval<30h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "download_analysis": "download_url_num>1400000000",
+            "parser_analysis": "parser_used_time<12h",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "adult-vip",
+        "project_name": "se",
+        "database_kutype": "adult-vip",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "14m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>4h; kutype_start_interval<30h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "download_analysis": "download_url_num>1400000000",
+            "parser_analysis": "parser_used_time<12h",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "zhidao-vip",
+        "project_name": "se",
+        "database_kutype": "zhidao-vip",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "14m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>4h; kutype_start_interval<30h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "download_analysis": "download_url_num>1400000000",
+            "parser_analysis": "parser_used_time<12h",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "wenku-vip",
+        "project_name": "se",
+        "database_kutype": "vip",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "14m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>4h; kutype_start_interval<30h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "download_analysis": "download_url_num>1400000000",
+            "parser_analysis": "parser_used_time<12h",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "adult",
+        "project_name": "se",
+        "database_kutype": "adult",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "14m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>4h; kutype_start_interval<30h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "download_analysis": "download_url_num>1400000000",
+            "parser_analysis": "parser_used_time<12h",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "zhidao",
+        "project_name": "se",
+        "database_kutype": "zhidao",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "14m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>4h; kutype_start_interval<30h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "download_analysis": "download_url_num>1400000000",
+            "parser_analysis": "parser_used_time<12h",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "wenku",
+        "project_name": "se",
+        "database_kutype": "wenku",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "14m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>4h; kutype_start_interval<30h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "download_analysis": "download_url_num>1400000000",
+            "parser_analysis": "parser_used_time<12h",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "scholar",
+        "project_name": "scholar",
+        "database_kutype": "scholar",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "14m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>4h; kutype_start_interval<30h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1",
+            "download_analysis": "download_url_num>1400000000",
+            "parser_analysis": "parser_used_time<12h",
+            "transmint_analysis" : "transdi_used_time<=1h; transdi_job_num>0"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "dnews-weibo",
+        "project_name": "dnews-weibo",
+        "database_kutype": "dnews-weibo",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>6h; kutype_start_interval<2.5h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1"
+          },
+          "monitor_strategy_private": {
+            "swift_analysis": "swift_publish_num>90000"
+          }
+        }
+      },
+      {
+        "name": "gcd-sr-wdna",
+        "project_name": "daily-silkroad",
+        "database_kutype": "gcd-sr-wdna",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>6h; kutype_start_interval<2.5h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "hourzd",
+        "project_name": "hour",
+        "database_kutype": "hourzd",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>6h; kutype_start_interval<2.5h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "nsnews",
+        "project_name": "hour",
+        "database_kutype": "nsnews",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>6h; kutype_start_interval<2.5h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "hourwk",
+        "project_name": "hour",
+        "database_kutype": "hourwk",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "8m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>6h; kutype_start_interval<2.5h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "tiebase",
+        "project_name": "tieba",
+        "database_kutype": "tiebase",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "20m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>6h; kutype_start_interval<2.5h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "gcd-en-se",
+        "project_name": "silkroad",
+        "database_kutype": "gcd-en-se",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "20m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>6h; kutype_start_interval<2.5h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      },
+      {
+        "name": "dadu",
+        "project_name": "dadu",
+        "database_kutype": "dadu",
+        "use_mysql_tablename": "ygg_job; ygg_monitor",
+        "load_mysql_interval": "20m",
+        "monitor": {
+          "monitor_strategy_public": {
+            "error_analysis": "error_restarted_job_num<1; error_failover_job_num<1",
+            "kutype_analysis": "kutype_running_flow_num>0; kutype_running_job_num>0; kutype_failed_job_num<1; kutype_cover_countdown>6h; kutype_start_interval<2.5h",
+            "flow_analysis": "flow_overtime_num<1",
+            "job_analysis": "job_overtime_job_num<1"
+          },
+          "monitor_strategy_private": {
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+<build kutype_num="1">
+    <kutype name="wdna">
+        <cycle_buffer>90m</cycle_buffer>
+        <load_mysql_interval>15m</load_mysql_interval>
+        <start_build_time>06:31</start_build_time>
+        <monitor>
+            <monitor_iterm mon_iterm_num="9">running_job_num,failed_job_num,overtime_job_num,coverrisk_job_num,restarted_job_num,failover_job_num,swift_publish_num,download_url_num,release_url_num</monitor_iterm>
+            <monitor_strategy_public mon_str_pub_num="3">kutype_analysis,flow_analysis,job_analysis,output_analysis</monitor_strategy_public>
+            <monitor_strategy_private mon_str_pri_num="1">swift_download_analysis</monitor_strategy_private>
+        </monitor>
+    </kutype>
+    <kutype name="se">
+        <cycle_buffer>6h</cycle_buffer>
+        <load_mysql_interval>30m</load_mysql_interval>
+        <start_build_time>20:01</start_build_time>
+        <monitor>
+            <monitor_iterm mon_iterm_num="6">running_job_num,failed_job_num,overtime_job_num,coverrisk_job_num,restarted_job_num,failover_job_num</monitor_iterm>
+            <monitor_strategy_public mon_str_pub_num="3">kutype_analysis,flow_analysis,job_analysis,output_analysis</monitor_strategy_public>
+            <monitor_strategy_private mon_str_pri_num="1">swift_download_analysis</monitor_strategy_private>
+        </monitor>
+    </kutype>
+</build>

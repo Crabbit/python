@@ -1,0 +1,55 @@
+{
+    "monitor_agent" : {
+        "debug_level" : "3",
+        "strategy" : {
+            "public_strategy_num" : "9",
+            "public_strategy": "error_analysis; kutype_analysis; flow_analysis; job_analysis; output_analysis; download_analysis; parser_analysis; dag_analysis; transmint_analysis",
+            "private_strategy_num" : "1",
+            "private_strategy": "swift_analysis"
+        }
+    },
+    "mysql" : {
+        "kutype_global_conf_table_num": "2",
+        "kutype_global_conf_table" : [
+            {
+                "data_name" : "ygg_ku_global_conf",
+                "host" : "xx-perseus-xx.com",
+                "port" : "3306",
+                "user" : "xxx",
+                "passwd" : "xxx",
+                "database" : "bop",
+                "table" : "ygg_kuType"
+            },
+            {
+                "data_name" : "ygg_job_conf",
+                "host" : "xx-perseus-xx.com",
+                "port" : "3306",
+                "user" : "xxx",
+                "passwd" : "xxx",
+                "database" : "bop",
+                "table" : "ygg_jobType"
+            }
+        ],
+        "kutype_metadata_analysis_table_num": "2",
+        "kutype_metadata_analysis_talbe" : [
+            {
+                "data_name" : "ygg_job_metadata",
+                "host" : "xx-perseus-xx.com",
+                "port" : "3306",
+                "user" : "xxx",
+                "passwd" : "xxx",
+                "database" : "bop",
+                "table" : "ygg_job"
+            },
+            {
+                "data_name" : "ygg_monitor_conf",
+                "host" : "xx-perseus-xx.com",
+                "port" : "3306",
+                "user" : "xxx",
+                "passwd" : "xxx",
+                "database" : "bop",
+                "table" : "ygg_monitor"
+            }
+        ]
+    }
+}
