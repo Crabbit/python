@@ -45,27 +45,33 @@ thread_count: 8 ; 抓取线程数
 > gevent/threading(多线程)
 >> 参考: http://docs.python.org/2/library/threading.html</br>
 >> 参考: http://www.cnblogs.com/huxi/archive/2010/06/26/1765808.html</br>
+
 > docopt/getopt/argparse(命令行参数处理)
 >> 参考: https://github.com/docopt/docopt</br>
 >> 参考: http://docs.python.org/2/library/getopt.html</br>
 >> 参考: http://andylin02.iteye.com/blog/845355</br>
 >> 参考: http://docs.python.org/2/howto/argparse.html</br>
 >> 参考: http://www.cnblogs.com/jianboqi/archive/2013/01/10/2854726.html</br>
+
 > ConfigParser(配置文件读取)
 >> 参考: http://docs.python.org/2/library/configparser.html</br>
 >> 参考: http://blog.chinaunix.net/uid-25890465-id-3312861.html</br>
+
 > urllib/urllib2/httplib(网页下载)
 >> 参考: http://docs.python.org/2/library/urllib2.html</br>
 >> 参考: http://blog.csdn.net/wklken/article/details/7364328</br>
 >> 参考: http://www.nowamagic.net/academy/detail/1302872</br>
+
 > pyquery/beautifulsoup4/HTMLParser/SGMLParser(HTML解析)
 >> 参考: http://docs.python.org/2/library/htmlparser.html</br>
 >> 参考: http://cloudaice.com/yong-pythonde-htmlparserfen-xi-htmlye-mian/</br>
 >> 参考: http://docs.python.org/2/library/sgmllib.html</br>
 >> 参考: http://pako.iteye.com/blog/592009</br>
+
 > urlparse(URL解析处理)
 >> 参考: http://docs.python.org/2/library/urlparse.html</br>
 >> 参考: http://blog.sina.com.cn/s/blog_5ff7f94f0100qr3c.html</br>
+
 > logging(日志处理)
 >> 参考: http://docs.python.org/2/library/logging.html
 >> 参考: http://kenby.iteye.com/blog/1162698
